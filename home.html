@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - Loan Service</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background-color: #f7f7f7; line-height: 1.6; }
+
+    /* Header Background Image */
+    header {
+      background: url('/home/off/Downloads/pexels-tima-miroshnichenko-6266280.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+      animation: slideDown 1.5s ease-in-out;
+    }
+    header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* overlay y’umukara ifite 50% opacity */
+  z-index: 1;
+}
+
+header h1, header p {
+  position: relative;
+  z-index: 2; /* kugirango inyandiko igume hejuru y’overlay */
+}
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+  
+
+    header p {
+      font-size: 20px;
+      opacity: 0;
+      animation: fadeIn 2s 0.5s ease-in-out forwards;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+      z-index: 2;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+     transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #8b928f;
+    }
+
+    section {
+      padding: 30px;
+      background-color: white;
+      margin: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 2s 1s ease-in-out forwards;
+    }
+
+    section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e1e2f;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      section {
+        padding: 20px;
+      }
+    }
+
+    /* FadeIn Animation */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* SlideDown Animation for Header */
+    @keyframes slideDown {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CredoraX</h1>
+    <p>"CredoraX – For the Life You Deserve."</p><br><br>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="About us.html">About Us</a></li>
+        <li><a href="Service.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Welcome to CredoraX!</h2>
+    <p>We offer fast and easy loans with a 20% monthly interest rate. "CredoraX – For the Life You Deserve."!</p><br><br>
+    <div class="container mt-4">
+      <h2>Facebook Feed</h2>
+      <div id="fb-feed" class="row">
+        <!-- Facebook feed izagaragara aha -->
+      </div>
+    </div>
+    
+    <!-- JS yacu -->
+    <script src="java/facebook-feed.js"></script>
+    
+    <video width="600" controls>
+        <source src="/home/off/Downloads/6282376-hd_1920_1080_30fps.mp4" type="video/mp4">
+        <source src="video.ogg" type="video/ogg">
+      </video>
+      
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Loan Service - All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
